@@ -1,20 +1,25 @@
-
-const routes = [
-  {
+const routes = [{
     path: '/',
     component: () => import('layouts/Layout.vue'),
-    children: [
-      { path: '', component: () => import('pages/Index.vue') }
+    children: [{
+            path: '/',
+            component: () => import('pages/Index.vue')
+        },
+        {
+            path: '/account',
+            name: 'account',
+            caption: 'Account',
+            component: () => import('pages/Account/User.vue')
+        }
     ]
-  }
-]
+}]
 
 // Always leave this as last one
 if (process.env.MODE !== 'ssr') {
-  routes.push({
-    path: '*',
-    component: () => import('pages/Error404.vue')
-  })
+    routes.push({
+        path: '*',
+        component: () => import('pages/Error404.vue')
+    })
 }
 
 export default routes
