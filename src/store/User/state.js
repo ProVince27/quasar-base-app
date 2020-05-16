@@ -1,5 +1,9 @@
 export default function () {
-  return {
-    //
-  }
+    return {
+        authenticated: false,
+        token: null,
+        user: {
+            username:null
+        }
+    }
 }

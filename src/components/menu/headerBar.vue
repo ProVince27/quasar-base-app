@@ -13,8 +13,12 @@
             <q-toolbar-title tag="a" to="/">
                 Base App
             </q-toolbar-title>
+            <q-toolbar-title stretch tag="a" to="/">
+                {{ account.username}}
+            </q-toolbar-title>
+            
             <q-btn-dropdown stretch flat icon="far fa-user" label="">
-                <q-list>
+                    <q-list>
                     <q-item-label header>Folders</q-item-label>
                     <q-item
                         v-for="n in 3"
@@ -75,7 +79,14 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
-    name: "header-bar"
+    name: "header-bar",
+    computed:{
+        ...mapGetters({
+            account:'User/getUser'
+        })
+    }
 };
 </script>
