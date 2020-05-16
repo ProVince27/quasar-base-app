@@ -1,11 +1,11 @@
 <template>
-  <q-page padding>
-    Account
-  </q-page>
+    <q-page padding>
+        Account
+    </q-page>
 </template>
 
 <script>
 export default {
-  name: 'UserPage',
-}
+    name: "UserPage"
+};
 </script>
