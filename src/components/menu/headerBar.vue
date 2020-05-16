@@ -14,11 +14,11 @@
                 Base App
             </q-toolbar-title>
             <q-toolbar-title stretch tag="a" to="/">
-                {{ account.username}}
+                {{ account.username }}
             </q-toolbar-title>
-            
+
             <q-btn-dropdown stretch flat icon="far fa-user" label="">
-                    <q-list>
+                <q-list>
                     <q-item-label header>Folders</q-item-label>
                     <q-item
                         v-for="n in 3"
@@ -46,13 +46,7 @@
                     </q-item>
                     <q-separator inset spaced />
                     <q-item-label header>Files</q-item-label>
-                    <q-item
-                        v-for="n in 3"
-                        :key="`y.${n}`"
-                        clickable
-                        v-close-popup
-                        tabindex="0"
-                    >
+                    <q-item clickable @click="logout">
                         <q-item-section avatar>
                             <q-avatar
                                 icon="assignment"
@@ -61,10 +55,8 @@
                             />
                         </q-item-section>
                         <q-item-section>
-                            <q-item-label>Vacation</q-item-label>
-                            <q-item-label caption
-                                >February 22, 2016</q-item-label
-                            >
+                            <!-- <q-item-label>Vacation</q-item-label> -->
+                            <q-item-label caption>Logout</q-item-label>
                         </q-item-section>
                         <q-item-section side>
                             <q-icon name="info" />
@@ -79,13 +71,18 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters,mapActions } from "vuex";
 
 export default {
     name: "header-bar",
-    computed:{
+    computed: {
         ...mapGetters({
-            account:'User/getUser'
+            account: "User/getUser"
+        })
+    },
+    methods:{
+        ...mapActions({
+            logout: 'User/signOut'
         })
     }
 };

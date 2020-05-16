@@ -10,15 +10,18 @@ const routes = [{
     {
         path: '/dashboard',
         component: () => import('layouts/backend.vue'),
+        meta:{ auth:true },
         children: [{
                 path: '/dashboard',
                 name: 'dashboard',
+                meta:{ auth:true },
                 component: () => import('pages/Dashboard/MainDashboard.vue')
             },
             {
                 path: '/account',
                 name: 'account',
                 caption: 'Account',
+                meta:{ auth:true },
                 component: () => import('pages/Account/UserPage.vue')
             }
         ]
