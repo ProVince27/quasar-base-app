@@ -14,14 +14,12 @@ const routes = [{
         children: [{
                 path: '/dashboard',
                 name: 'dashboard',
-                meta:{ auth:true },
                 component: () => import('pages/Dashboard/MainDashboard.vue')
             },
             {
                 path: '/account',
                 name: 'account',
                 caption: 'Account',
-                meta:{ auth:true },
                 component: () => import('pages/Account/UserPage.vue')
             }
         ]

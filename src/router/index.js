@@ -31,6 +31,7 @@ export default function ({store} /* { store, ssrContext } */ ) {
     })
 
     Router.beforeEach((to,from,next) => { 
+        // to.matched.some(record => record.meta.auth)
         if(to.meta.auth && store.state.User.authenticated){
             next()
         } else {

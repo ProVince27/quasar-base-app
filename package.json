@@ -9,7 +9,8 @@
   "private": true,
   "scripts": {
     "watch": "quasar dev -p 3000",
-    "pwa": "quasar dev -m pwa"
+    "watch-pwa": "quasar dev -m pwa",
+    "watch-electron": "quasar dev -m electron"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
