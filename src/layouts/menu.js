@@ -2,7 +2,7 @@ export default [{
     title: 'Dashboard',
     icon: 'fas fa-tachometer-alt',
     caption: 'Demo',
-    link: '/',
+    link: 'dashboard',
     params: [],
     roles: [],
     permissions: [],

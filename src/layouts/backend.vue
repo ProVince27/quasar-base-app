@@ -26,7 +26,7 @@
 <script>
 
 export default {
-    name: "Layout",
+    name: "backend",
     components: {
         sidebar:() => import('components/menu/sidebar'),
         headerBar:() => import('components/menu/headerBar')
