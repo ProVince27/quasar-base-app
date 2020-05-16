@@ -1,0 +1,40 @@
+export default [{
+    title: 'Dashboard',
+    icon: 'fas fa-tachometer-alt',
+    caption: 'Demo',
+    link: '/',
+    params: [],
+    roles: [],
+    permissions: [],
+    side: {
+        icon: null,
+        title: null,
+    },
+}, {
+    title: 'Accounts',
+    icon: 'far fa-user',
+    caption: null,
+    link: 'account',
+    params: [],
+    roles: [],
+    permissions: [],
+    side: {
+        icon: null,
+        label: null,
+    },
+    children: [{
+        title: 'User',
+        icon: 'far fa-user',
+        caption: null,
+        link: 'account',
+        params: [],
+        roles: [],
+        permissions: [],
+        side: {
+            icon: null,
+            label: 3,
+        },
+    }],
+    // headerInsetLevel:1,
+    // contentInsetLevel:1,
+}]
